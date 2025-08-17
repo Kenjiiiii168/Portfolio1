@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promotions | Mini Shopee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="promotions-page">
+<header>
+    <h1>Mini Shopee</h1>
+    <div class="header-right">
+        <a href="{{ url_for('index') }}">🏠 Home</a>
+        <a href="{{ url_for('cart') }}">🛒 Cart</a>
+        <a href="{{ url_for('promotions') }}" class="promo-link active">
+            <span style="font-size:1.2em; color:#ff4081;">🎁</span>
+            <span style="font-weight:bold; color:#ff4081;">Promotions</span>
+        </a>
+    </div>
+</header>
+
+<div class="promo-banner">
+    <span class="promo-icon">🎉</span>
+    <span class="promo-title">Special Promotions!</span>
+</div>
+
+<div class="products" id="promo-list">
+    {% for product in products %}
+    <div class="product-card promo-card" data-category="{{ product.category }}">
+        <div class="promo-badge">{{ product.promo }}</div>
+        <img src="{{ product.image }}" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price }}</p>
+        <a href="{{ url_for('add_to_cart', product_id=product.id) }}" class="add-btn">Add to Cart</a>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>

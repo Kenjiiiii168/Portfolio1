@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini Shopee</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="promotions-page">
+<header>
+    <h1>Mini Shopee</h1>
+    <div class="header-right">
+        <input type="text" id="search" placeholder="Search...">
+        <a href="{{ url_for('cart') }}">🛒 Cart</a>
+        <a href="{{ url_for('promotions') }}" class="promo-link">
+            <span style="font-size:1.2em; color:#ff4081;">🎁</span>
+            <span style="font-weight:bold; color:#ff4081;">Promotions</span>
+        </a>
+    </div>
+</header>
+
+<div class="filter-sort">
+    <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Accessories">Accessories</option>
+    </select>
+
+    <select id="priceSort">
+        <option value="none">Sort by Price</option>
+        <option value="asc">Price: Low → High</option>
+        <option value="desc">Price: High → Low</option>
+    </select>
+</div>
+
+<div class="products" id="product-list">
+    {% for product in products %}
+    <div class="product-card" data-category="{{ product.category }}">
+        {% if product.promo %}
+        <div class="promo-badge">{{ product.promo }}</div>
+        {% endif %}
+        <img src="{{ product.image }}" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price }}</p>
+        <a href="{{ url_for('add_to_cart', product_id=product.id) }}" class="add-btn">Add to Cart</a>
+    </div>
+    {% endfor %}
+</div>
+
+<div id="popup" class="popup">Added to Cart!</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

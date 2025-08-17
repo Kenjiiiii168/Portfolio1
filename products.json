@@ -1,0 +1,12 @@
+[
+  {"id":1,"name":"T-Shirt","price":299,"image":"https://m.media-amazon.com/images/I/41qXpfoB89L._UY350_.jpg","promo":"ลด 20%","category":"Clothing"},
+  {"id":2,"name":"Sneakers","price":1200,"image":"https://i.ebayimg.com/00/s/MTE2N1gxNjAw/z/IIwAAOSwl6JmydEP/$_57.JPG?set_id=880000500F","promo":"Free Shipping","category":"Shoes"},
+  {"id":3,"name":"Backpack","price":799,"image":"https://www.antler.co.uk/cdn/shop/files/antler-luggage-backpack-in-black-icon-backpack-4721124082-41455050064003.jpg?v=1726621841","promo":"","category":"Accessories"},
+  {"id":4,"name":"Cap","price":199,"image":"https://m.media-amazon.com/images/I/61j-nUQuKRL._AC_SL1100_.jpg","promo":"ลด 10%","category":"Accessories"},
+  {"id":5,"name":"Watch","price":2500,"image":"https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXM23ref_FV99_VW_34FR+watch-case-46-aluminum-jetblack-nc-s10_VW_34FR+watch-face-46-aluminum-jetblack-s10_VW_34FR?wid=2000&hei=2000&fmt=png-alpha&.v=TnVrdDZWRlZzTURKbHFqOGh0dGpVRW5TeWJ6QW43NUFnQ2V4cmRFc1VnYUdWejZ5THhpKzJwRmRDYlhxN2o5aXB2QjR6TEZ4ZThxM3VqYkZobmlXM3RGNnlaeXQ4NGFKQTAzc0NGeHR2aVk0VEhOZEFKYmY1ZHNpalQ3YVhOWk9WVlBjZVFuazArV21YaFcvTVJ5dzR1UTU4N0MwSS9jYWJEbEpiZWpYQy9pRFJvTk1WL3dkOUtPUHdmeHpVRi90ejJNajZQak9EYzBUOWd3YWlIOHpLQlFVMEJ2bnk4TDV2UWtuV05TbzFPRQ","promo":"","category":"Accessories"},
+  {"id":6,"name":"Sunglasses","price":499,"image":"https://i02.appmifile.com/797_item_id/24/09/2024/8fbd5fc3283e7fe95831e64734ab5cb1!800x800!85.png","promo":"ลด 15%","category":"Accessories"},
+  {"id":7,"name":"Jeans","price":899,"image":"https://www.gerberchildrenswear.com/cdn/shop/files/Gerber_1-pack-baby-neutral-blue-straight-fit-jeans-evyr-d_image_1.jpg?v=1721762942&width=1920","promo":"","category":"Clothing"},
+  {"id":8,"name":"Jacket","price":1999,"image":"https://m.media-amazon.com/images/I/4140N5JFj8L.jpg","promo":"Free Shipping","category":"Clothing"},
+  {"id":9,"name":"Wallet","price":350,"image":"https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/M89636s.jpg?im=Resize,width=750","promo":"","category":"Accessories"},
+  {"id":10,"name":"Shoes","price":1500,"image":"https://contents.mediadecathlon.com/p2449854/k$f07276116e91b65093ca11b09c2b9ce0/women-s-multi-court-tennis-shoes-essential-off-white-artengo-8652176.jpg?f=1920x0&format=auto","promo":"ลด 5%","category":"Shoes"}
+]

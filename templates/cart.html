@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cart - Mini Shopee</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="cart-page">
+<header>
+    <h1>Your Cart</h1>
+    <a href="{{ url_for('index') }}">🏠 Back to Shop</a>
+    <a href="{{ url_for('clear_cart') }}">🗑 Clear Cart</a>
+</header>
+
+<div class="cart-items">
+    {% if cart_items %}
+        {% for item in cart_items %}
+        <div class="cart-item" data-id="{{ item.id }}">
+            <img src="{{ item.image }}" alt="{{ item.name }}">
+            <p>{{ item.name }} - <span class="item-price">{{ item.price }}</span> ฿</p>
+            <div class="quantity">
+                <button class="minus" data-id="{{ item.id }}">-</button>
+                <input type="number" class="qty" data-id="{{ item.id }}" min="1" value="{{ item.qty }}">
+                <button class="plus" data-id="{{ item.id }}">+</button>
+                <button class="remove" data-id="{{ item.id }}">❌ Remove</button>
+            </div>
+            <p>Subtotal: <span class="subtotal" data-id="{{ item.id }}">{{ item.subtotal }}</span> ฿</p>
+        </div>
+        {% endfor %}
+        <h3>Total: <span id="total">{{ total }}</span> ฿</h3>
+    {% else %}
+        <p>Cart is empty 😢</p>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+</html>
